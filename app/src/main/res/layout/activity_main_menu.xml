@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainMenuActivity">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/action_bar" />
+
+    <ImageView
+        android:id="@+id/meeting_new_people_main_menu_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/meeting_new_people_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/meeting_new_people_main_menu_text"
+        app:layout_constraintEnd_toStartOf="@id/whiteboard_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar"
+        app:srcCompat="@drawable/meeting_new_people" />
+
+    <ImageView
+        android:id="@+id/whiteboard_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/whiteboard_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/whiteboard_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/meeting_new_people_main_menu_image"
+        app:layout_constraintTop_toBottomOf="@id/action_bar"
+        app:srcCompat="@drawable/white_board" />
+
+    <ImageView
+        android:id="@+id/food_delivery_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/food_delivery_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/food_delivery_text"
+        app:layout_constraintEnd_toStartOf="@id/parent_community_help_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meeting_new_people_main_menu_text"
+        app:srcCompat="@drawable/food_delivery" />
+
+    <ImageView
+        android:id="@+id/parent_community_help_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/parent_help_community"
+        app:layout_constraintBottom_toTopOf="@id/parent_community_help_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/food_delivery_image"
+        app:layout_constraintTop_toBottomOf="@id/whiteboard_text"
+        app:srcCompat="@drawable/parent_community_help" />
+
+    <ImageView
+        android:id="@+id/babysitting_service_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/babysitter_services_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/babysitting_service_text"
+        app:layout_constraintEnd_toStartOf="@id/groups_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_delivery_text"
+        app:srcCompat="@drawable/babysitter" />
+
+    <ImageView
+        android:id="@+id/groups_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/groups_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/groups_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/babysitting_service_image"
+        app:layout_constraintTop_toBottomOf="@id/parent_community_help_text"
+        app:srcCompat="@drawable/groups" />
+
+    <ImageView
+        android:id="@+id/emergency_center_image"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/emergency_center_main_menu"
+        app:layout_constraintBottom_toTopOf="@id/emergency_center_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/babysitting_service_text"
+        app:srcCompat="@drawable/emergency" />
+
+    <TextView
+        android:id="@+id/meeting_new_people_main_menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meeting_new_people"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/food_delivery_image"
+        app:layout_constraintEnd_toEndOf="@id/meeting_new_people_main_menu_image"
+        app:layout_constraintStart_toStartOf="@id/meeting_new_people_main_menu_image"
+        app:layout_constraintTop_toBottomOf="@id/meeting_new_people_main_menu_image" />
+
+    <TextView
+        android:id="@+id/whiteboard_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whiteboard"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/parent_community_help_image"
+        app:layout_constraintEnd_toEndOf="@id/whiteboard_image"
+        app:layout_constraintStart_toStartOf="@id/whiteboard_image"
+        app:layout_constraintTop_toBottomOf="@id/whiteboard_image" />
+
+    <TextView
+        android:id="@+id/food_delivery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_delivery"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/babysitting_service_image"
+        app:layout_constraintEnd_toEndOf="@id/food_delivery_image"
+        app:layout_constraintStart_toStartOf="@id/food_delivery_image"
+        app:layout_constraintTop_toBottomOf="@id/food_delivery_image" />
+
+    <TextView
+        android:id="@+id/parent_community_help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parent_community_help"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/groups_image"
+        app:layout_constraintEnd_toEndOf="@id/parent_community_help_image"
+        app:layout_constraintStart_toStartOf="@id/parent_community_help_image"
+        app:layout_constraintTop_toBottomOf="@id/parent_community_help_image" />
+
+    <TextView
+        android:id="@+id/babysitting_service_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/babysitting_services"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/emergency_center_image"
+        app:layout_constraintEnd_toEndOf="@id/babysitting_service_image"
+        app:layout_constraintStart_toStartOf="@id/babysitting_service_image"
+        app:layout_constraintTop_toBottomOf="@id/babysitting_service_image" />
+
+    <TextView
+        android:id="@+id/groups_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/groups"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/emergency_center_image"
+        app:layout_constraintEnd_toEndOf="@id/groups_image"
+        app:layout_constraintStart_toStartOf="@id/groups_image"
+        app:layout_constraintTop_toBottomOf="@id/groups_image" />
+
+    <TextView
+        android:id="@+id/emergency_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emergency_center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emergency_center_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

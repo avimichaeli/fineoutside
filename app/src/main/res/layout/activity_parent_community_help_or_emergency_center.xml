@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".activities.ParentCommunityHelpOrEmergencyCenterActivity">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/action_bar" />
+
+    <TextView
+        android:id="@+id/success_cases_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:text="@string/success_cases"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toTopOf="@id/enable_messages_container"
+        app:layout_constraintEnd_toStartOf="@id/failed_cases_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar" />
+
+    <TextView
+        android:id="@+id/failed_cases_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:text="@string/failed_cases"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@id/enable_messages_container"
+        app:layout_constraintEnd_toStartOf="@id/cases_from_now_text"
+        app:layout_constraintStart_toEndOf="@id/success_cases_text"
+        app:layout_constraintTop_toBottomOf="@id/action_bar" />
+
+    <TextView
+        android:id="@+id/cases_from_now_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        android:text="@string/cases_from_now"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toTopOf="@id/enable_messages_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/failed_cases_text"
+        app:layout_constraintTop_toBottomOf="@id/action_bar" />
+
+    <LinearLayout
+        android:id="@+id/enable_messages_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/search_messages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/failed_cases_text">
+
+        <TextView
+            android:id="@+id/enable_messages_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/enable_messages"
+            app:layout_constraintBottom_toTopOf="@id/messagesList"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/success_cases_text" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/enable_messages_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintBottom_toTopOf="@id/messagesList"
+            app:layout_constraintStart_toEndOf="@id/enable_messages_text"
+            app:layout_constraintTop_toBottomOf="@id/success_cases_text" />
+
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/search_messages"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/messagesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enable_messages_container" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/send_message_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_messages"
+        app:reverseLayout="true"
+        tools:itemCount="15"
+        tools:listitem="@layout/view_message_cell" />
+
+    <ImageButton
+        android:id="@+id/add_photo_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/add_photo"
+        android:src="@drawable/ic_add_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/write_your_message_edit"
+        app:layout_constraintTop_toBottomOf="@id/messagesList" />
+
+    <EditText
+        android:id="@+id/write_your_message_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="write your message"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/write_your_message"
+        android:inputType="textMultiLine"
+        android:textColor="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/add_photo_button"
+        app:layout_constraintStart_toEndOf="@id/send_message_button"
+        app:layout_constraintTop_toBottomOf="@id/messagesList" />
+
+    <Button
+        android:id="@+id/send_message_button"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/write_your_message_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messagesList" />
+
+    <TextView
+        android:id="@+id/message_enable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/messages_enable"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

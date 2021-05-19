@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".activities.ParentCommunityOrEmergencyCenterChatActivity">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/action_bar" />
+
+    <include
+        android:id="@+id/first_message_container"
+        layout="@layout/view_message_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/chatsList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatsList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/that_is_done_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_message_container"
+        tools:listitem="@layout/view_message_cell" />
+
+    <TextView
+        android:id="@+id/that_is_done_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/that_is_done"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toTopOf="@id/send_button"
+        app:layout_constraintEnd_toStartOf="@id/i_did_not_get_help_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatsList" />
+
+    <TextView
+        android:id="@+id/i_did_not_get_help_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/i_did_not_get_help"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@id/send_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/that_is_done_text"
+        app:layout_constraintTop_toBottomOf="@id/chatsList" />
+
+    <ImageButton
+        android:id="@+id/add_photo_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/add_photo"
+        android:src="@drawable/ic_add_photo"
+        app:layout_constraintBottom_toBottomOf="@id/send_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/write_your_message_edit"
+        app:layout_constraintTop_toTopOf="@id/send_button" />
+
+    <EditText
+        android:id="@+id/write_your_message_edit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="write your message"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/write_your_message"
+        android:inputType="textMultiLine"
+        android:textColor="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="@id/send_button"
+        app:layout_constraintEnd_toStartOf="@id/add_photo_button"
+        app:layout_constraintStart_toEndOf="@id/send_button"
+        app:layout_constraintTop_toTopOf="@id/send_button" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="84dp"
+        android:layout_height="62dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/write_your_message_edit"
+        app:layout_constraintStart_toEndOf="@id/location_button"
+        app:layout_constraintTop_toBottomOf="@id/that_is_done_text" />
+
+    <ImageButton
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:contentDescription="@string/location"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@id/send_button"
+        app:layout_constraintEnd_toStartOf="@id/send_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/send_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

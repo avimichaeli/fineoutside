@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fineoutside">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.premission.INTERNET" />
+
+    <application
+        android:icon="@drawable/fine_outside_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Fineoutside"
+        tools:replace="android:supportsRtl">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GroupsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BabysittingServicesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ParentCommunityHelpOrEmergencyCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WhiteBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MeetingNewPeopleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MainMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.UserDetailsFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authentication.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authentication.AuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ParentCommunityOrEmergencyCenterChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.UserMessagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FamilyProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BasicChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GroupFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.YourGroupsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WhiteBoardFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WhiteBoardChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AnalyticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FoodDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BusinessProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BabysitterProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ChooseBusinessOwnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

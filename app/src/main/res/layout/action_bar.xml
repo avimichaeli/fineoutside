@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/feature_image"
+        android:layout_width="105dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/parents_help_community_center_help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logo_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="145dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/fine_outside_parents_community_help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/feature_image"
+        app:layout_constraintStart_toEndOf="@id/hamburger_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fine_outside_logo" />
+
+    <ImageView
+        android:id="@+id/hamburger_menu"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/hamburger_parents_help_community_activation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logo_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/the_hamburger" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

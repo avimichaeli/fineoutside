@@ -1,0 +1,162 @@
+<resources>
+    <string name="app_name">Fine Outside</string>
+    <string name="facebook_application_id">2917057431899128</string>
+    <string name="welcome">welcome</string>
+    <string name="logo_image_2">logo_image_2</string>
+    <string name="logo_image">logo_image</string>
+    <string name="image_logo_3">image_logo_3</string>
+    <string name="logo_image_4">logo_image_4</string>
+    <string name="user_name">User name</string>
+    <string name="sign_up">sign up</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="log_in">log in</string>
+    <string name="already_have_an_account_log_in_from_here">Already have an account? Log in</string>
+    <string name="logo_image_main_menu_screen">logo_image_main_menu_screen</string>
+    <string name="main_menu_hamburger">main_menu_hamburger</string>
+    <string name="meeting_new_people_main_menu">meeting_new_people_main_menu</string>
+    <string name="whiteboard_main_menu">whiteboard_main_menu</string>
+    <string name="food_delivery_main_menu">food_delivery_main_menu</string>
+    <string name="parent_help_community">parent_help_community</string>
+    <string name="babysitter_services_main_menu">babysitter_services_main_menu</string>
+    <string name="emergency_center_main_menu">emergency_center_main_menu</string>
+    <string name="groups_main_menu">groups_main_menu</string>
+    <string name="meeting_new_people">meeting new people</string>
+    <string name="whiteboard">whiteboard</string>
+    <string name="food_delivery">food delivery</string>
+    <string name="parent_community_help">parent community help</string>
+    <string name="babysitting_services">babysitting services</string>
+    <string name="emergency_center">emergency center</string>
+    <string name="groups">groups</string>
+    <string name="parents_help_community_center_help">parents_help_community_center_activation</string>
+    <string name="fine_outside_parents_community_help">fine_outside_parents_community_help</string>
+    <string name="hamburger_parents_help_community_activation">hamburger_parents_help_community_activation</string>
+    <string name="write_your_message">write your message</string>
+    <string name="send">send</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="skip_for_now">skip for now</string>
+    <string name="sign_up_screen_terms_of_service">By signing up you accept the Terms of services and Privacy policy</string>
+    <string name="profile_pic">profile pic</string>
+    <string name="select_user_type">Select user type</string>
+
+    <string name="enable_upload_pics">Enable upload pictures</string>
+    <string name="enable_push_notifications">Enable push notifications</string>
+    <string name="finish">finish</string>
+    <string name="add_photo">Add photo</string>
+    <string name="select_option">Please select an option</string>
+    <string name="camera">Camera</string>
+    <string name="photo_library">Photo Library</string>
+    <string name="cancel">Cancel</string>
+    <string name="enable_messages">Enable messages</string>
+    <string name="success_cases">Success cases</string>
+    <string name="failed_cases">Failed cases</string>
+    <string name="location">location</string>
+    <string name="cases_from_now">Cases from now</string>
+    <string name="that_is_done">That is done</string>
+    <string name="i_did_not_get_help">I did not get help</string>
+    <string name="sharing_location">Sharing location</string>
+    <string name="are_you_sure_location">Are you sure you want to share your current location, to see other users location and distance?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="need_location_permission">In order to share your location, please grant location permission</string>
+    <string name="cant_find_location">We can\'t find your current location</string>
+    <string name="shared_location">Click here to watch shared location</string>
+    <string name="distance">The distance between the user and you is:</string>
+    <string name="photo">photo</string>
+    <string name="messages_enable">Please enable messages by the upper switch</string>
+    <string name="emergency_text">If you have an emergency around you, please write it</string>
+    <string name="create_or_update_family_profile">create/update family profile</string>
+    <string name="new_profile_title">Please fill the following fields:</string>
+    <string name="age">Age</string>
+    <string name="family_status">Family status</string>
+    <string name="mate_name">Mate name</string>
+    <string name="mate_age">Mate age</string>
+    <string name="num_of_children">Num of children</string>
+    <string name="child_age">Child age</string>
+    <string name="create_profile">Create profile</string>
+    <string name="child_name">Child name</string>
+    <string name="users_chat_title">Chat with: %s and %s</string>
+    <string name="create_new_group">create new group</string>
+    <string name="your_groups">your groups</string>
+    <string name="group_title">Create new group</string>
+    <string name="group_name">Group name</string>
+    <string name="group_description">Group description</string>
+    <string name="join_or_leave_group">click here to join/leave that group</string>
+    <string name="my_group">my_group</string>
+    <string name="post_whiteboard_message">Post whiteboard message</string>
+    <string name="post_subject">Post subject</string>
+    <string name="post_content">Post content</string>
+    <string name="no_posts_message">You should join a group before posting a message here</string>
+    <string name="delete_post">delete post</string>
+    <string name="user_entrance">My user\nNum of entrances: %d</string>
+    <string name="whiteboard_entrance">Feature whiteboard \nNum of entrances: %d</string>
+    <string name="meeting_new_people_entrance">Feature meeting new people\nNum of entrances: %d</string>
+    <string name="parent_community_help_entrance">Feature parent community help\nNum of entrances: %d</string>
+    <string name="food_delivery_entrance">Feature food delivery\nNum of entrances: %d</string>
+    <string name="groups_entrance">Feature groups\nNum of entrances: %d</string>
+    <string name="babysitting_services_entrance">Feature babysitting services\nNum of entrances: %d</string>
+    <string name="emergency_help_entrance">Feature emergency help\nNum of entrances: %d</string>
+    <string name="business_name">Business name</string>
+    <string name="select_food_type">Select food type</string>
+    <string name="create_order">create order</string>
+    <string name="finish_order">finish order</string>
+    <string name="join_the_order">join the order</string>
+    <string name="phone_number">Insert your phone number</string>
+    <string name="open_orders">open orders</string>
+    <string name="closed_orders">closed orders</string>
+    <string name="close_the_order">close the order</string>
+    <string name="about_me">About me</string>
+    <string name="connect">connect</string>
+    <string name="no_users_message">There are no users who connected you yet</string>
+    <string name="total_app_users">Total app users: %d</string>
+    <string name="users_joined_count">The num of users who joined on the last week: %d</string>
+    <string name="price">Congratulations! You have just won a 100 NIS voucher for \"motzetzim\".</string>
+    <string name="settings_title">User settings</string>
+    <string name="change_display_name">change display name</string>
+    <string name="change_password">change password</string>
+    <string name="continue_button">continue</string>
+    <string name="delete_profile">delete profile</string>
+    <string name="choose_your_order">Choose your order please</string>
+    <string name="choose_business_owner">Choose business owner</string>
+    <string name="no_family_profile_message">You need to have family profile if you want to meet with new people</string>
+    <string name="delete_group">delete group</string>
+
+    <string-array name="user_types">
+        <item>Regular</item>
+        <item>Business Owner</item>
+        <item>Babysitter</item>
+    </string-array>
+
+    <string-array name="family_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorcee</item>
+        <item>Widower</item>
+    </string-array>
+
+    <string-array name="children">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="food_types">
+        <item>Sushi</item>
+        <item>Schnitzel and Chips</item>
+        <item>Cappuccino</item>
+        <item>Black Coffee</item>
+        <item>Tea</item>
+        <item>Pizza</item>
+        <item>Hamburger</item>
+    </string-array>
+
+    <string-array name="order_types">
+        <item>Food for kids</item>
+        <item>Drinks for parents</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/new_profile_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_profile_title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/user_name"
+            app:layout_constraintBottom_toBottomOf="@id/user_name_edit"
+            app:layout_constraintEnd_toStartOf="@id/user_name_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/user_name_edit" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_name_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/user_name_text"
+            app:layout_constraintTop_toBottomOf="@id/new_profile_title_text" />
+
+        <TextView
+            android:id="@+id/age_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/age"
+            app:layout_constraintBottom_toBottomOf="@id/age_edit"
+            app:layout_constraintEnd_toStartOf="@id/age_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/age_edit" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/age_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/age_text"
+            app:layout_constraintTop_toBottomOf="@id/user_name_edit" />
+
+        <TextView
+            android:id="@+id/family_status_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/family_status"
+            app:layout_constraintBottom_toBottomOf="@id/family_status_spinner"
+            app:layout_constraintEnd_toStartOf="@id/family_status_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/family_status_spinner" />
+
+        <Spinner
+            android:id="@+id/family_status_spinner"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:entries="@array/family_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/family_status_text"
+            app:layout_constraintTop_toBottomOf="@id/age_edit" />
+
+        <TextView
+            android:id="@+id/mate_name_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/mate_name"
+            app:layout_constraintBottom_toBottomOf="@id/mate_name_edit"
+            app:layout_constraintEnd_toStartOf="@id/mate_name_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mate_name_edit" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/mate_name_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mate_name_text"
+            app:layout_constraintTop_toBottomOf="@id/family_status_spinner" />
+
+        <TextView
+            android:id="@+id/mate_age_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/mate_age"
+            app:layout_constraintBottom_toBottomOf="@id/mate_age_edit"
+            app:layout_constraintEnd_toStartOf="@id/mate_age_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mate_age_edit" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/mate_age_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mate_age_text"
+            app:layout_constraintTop_toBottomOf="@id/mate_name_edit" />
+
+        <TextView
+            android:id="@+id/num_of_children_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/num_of_children"
+            app:layout_constraintBottom_toBottomOf="@id/num_of_children_spinner"
+            app:layout_constraintEnd_toStartOf="@id/num_of_children_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/num_of_children_spinner" />
+
+        <Spinner
+            android:id="@+id/num_of_children_spinner"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:entries="@array/children"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/num_of_children_text"
+            app:layout_constraintTop_toBottomOf="@id/mate_age_edit" />
+
+        <LinearLayout
+            android:id="@+id/children_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/num_of_children_spinner" />
+
+        <Button
+            android:id="@+id/create_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/create_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/children_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

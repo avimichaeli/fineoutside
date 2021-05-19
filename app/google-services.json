@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "977103380142",
+    "firebase_url": "https://fineoutside-3a34a-default-rtdb.firebaseio.com",
+    "project_id": "fineoutside-3a34a",
+    "storage_bucket": "fineoutside-3a34a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977103380142:android:a9379f767dee7293bad73f",
+        "android_client_info": {
+          "package_name": "com.example.fineoutside"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977103380142-a4gavhkvi5alhghk9evbne7qjliqb4s4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fineoutside",
+            "certificate_hash": "cd26939efe9ee7ac0d738cf3aafea211ea119082"
+          }
+        },
+        {
+          "client_id": "977103380142-mj7ad9opo2dphg22036r76f22ie8ebof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAco0clunOOyDubNzwd3DMMCMdEhzCZbl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977103380142-mj7ad9opo2dphg22036r76f22ie8ebof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

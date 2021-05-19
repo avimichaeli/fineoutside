@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="#dbbe84"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/user_name_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="right|center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/num_of_children_text"
+        app:layout_constraintEnd_toStartOf="@id/user_age_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_age_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/children_ages_text"
+        app:layout_constraintEnd_toStartOf="@id/profile_pic_image"
+        app:layout_constraintStart_toEndOf="@id/user_name_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/num_of_children_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="end|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/user_name_text"
+        app:layout_constraintStart_toStartOf="@id/user_name_text"
+        app:layout_constraintTop_toBottomOf="@id/user_name_text" />
+
+    <TextView
+        android:id="@+id/children_ages_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/profile_pic_image"
+        app:layout_constraintStart_toStartOf="@id/user_age_text"
+        app:layout_constraintTop_toBottomOf="@id/user_age_text" />
+
+    <ImageView
+        android:id="@+id/profile_pic_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/profile_pic"
+        android:src="@drawable/ic_identity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
