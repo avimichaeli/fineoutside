@@ -41,14 +41,14 @@ public class FoodDeliveryActivity extends LocationActivity {
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
     private final DatabaseReference usersRoot = database.getReference().child("fine outside users");
     private final List<OrderItem> childrenOrderItemsList = Arrays.asList(
-        new OrderItem("Hamburger", "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.", 0, R.drawable.hamburger, 30.0),
-        new OrderItem("Pizza", "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven.", 0, R.drawable.pizza, 15.0),
-        new OrderItem("Sushi", "Sushi is a traditional Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, often raw, and vegetables.", 0, R.drawable.sushi, 45.0),
-        new OrderItem("Schnitzel and Chips", "A schnitzel is a thin slice of meat fried in fat. The meat is usually thinned by pounding with a meat tenderizer.", 0, R.drawable.schnizel, 60.0));
+        new OrderItem("Hamburger", "4 units, each unit includes 2 slices of hamburger bun , and 100 grams of meat.", 0, R.drawable.hamburger, 60.0),
+        new OrderItem("Pizza", "4 units of medium sized cheese pizza.", 0, R.drawable.pizza, 40.0),
+        new OrderItem("Sushi", "Consists of 8 pieces of rice and tuna fish. in addition there is rice vinegar.", 0, R.drawable.sushi, 40.0),
+        new OrderItem("Schnitzel and Chips", "Consists of 200 grams of chips , and 8 units of 10 grams schnitzels.", 0, R.drawable.schnizel, 40.0));
     private final List<OrderItem> parentsOrderItemsList = Arrays.asList(
-        new OrderItem("Black Coffee", "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain coffee species.", 0, R.drawable.black_coffee, 5.0),
-        new OrderItem("Cappuccino", "A cappuccino is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam.", 0, R.drawable.cappuccino, 7.0),
-        new OrderItem("Tea", "Tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia.", 0, R.drawable.tea, 9.0));
+        new OrderItem("Black Coffee", "100 grams of just black coffee.", 0, R.drawable.black_coffee, 20.0),
+        new OrderItem("Cappuccino", "100 grams of cappuccino.", 0, R.drawable.cappuccino, 20.0),
+        new OrderItem("Tea", "100 grams of green tea.", 0, R.drawable.tea, 20.0));
     private Spinner order_type_spinner;
     private SearchView search_order_items;
     private RecyclerView order_items_list;

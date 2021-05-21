@@ -29,7 +29,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupViewHol
 
     private final List<Group> groupList;
     private List<Group> groupListFiltered;
-    private DeleteGroupListener deleteGroupListener;
+    private final DeleteGroupListener deleteGroupListener;
 
     public GroupAdapter(List<Group> groupList, DeleteGroupListener deleteGroupListener) {
         this.groupList = groupList;
@@ -48,8 +48,8 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupViewHol
         Group group = groupListFiltered.get(position);
         holder.group_name_text.setText(group.getName());
         holder.group_description_text.setText(group.getDescription());
-        holder.my_group_image.setVisibility(user != null && group.getRegistered_users() != null && group.getRegistered_users().contains(user.getUid()) ? View.VISIBLE : View.GONE);
-        holder.delete_group_button.setVisibility(group.getCreator_id().equalsIgnoreCase(user == null ? "" : user.getUid()) ? View.VISIBLE : View.GONE);
+        holder.my_group_image.setVisibility(user != null && group.getRegistered_users() != null && group.getRegistered_users().contains(user.getUid()) ? View.VISIBLE : View.INVISIBLE);
+        holder.delete_group_button.setVisibility(group.getCreator_id().equalsIgnoreCase(user == null ? "" : user.getUid()) ? View.VISIBLE : View.INVISIBLE);
         holder.delete_group_button.setOnClickListener(v -> {
             if (deleteGroupListener != null) {
                 deleteGroupListener.onDeleteGroup(group.getId());
