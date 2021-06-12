@@ -120,7 +120,7 @@ public class NewPeopleAdapter extends RecyclerView.Adapter<NewPeopleAdapter.NewP
                         } catch (Exception ignored) {
 
                         }
-                        if (isAgeInList || familyProfile.getUser_name().toLowerCase().contains(charString.toLowerCase()) || familyProfile.getUser_name().toLowerCase().equalsIgnoreCase(charString.toLowerCase())) {
+                        if (isAgeInList || familyProfile.getUser_name().toLowerCase().contains(charString.toLowerCase())) {
                             filteredList.add(familyProfile);
                         }
                     }
