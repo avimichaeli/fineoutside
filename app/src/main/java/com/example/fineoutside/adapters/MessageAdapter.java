@@ -200,7 +200,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                 } else {
                     List<Message> filteredList = new ArrayList<>();
                     for (Message message : messages) {
-                        if (message.getMessage_content().toLowerCase().contains(charString.toLowerCase())) {
+                        if (message.getMessage_content().toLowerCase().contains(charString.toLowerCase()) || message.getUser_name().toLowerCase().equalsIgnoreCase(charString.toLowerCase()) || message.getTime().equalsIgnoreCase(charString)) {
                             filteredList.add(message);
                         }
                     }
