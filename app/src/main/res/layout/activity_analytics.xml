@@ -1,120 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp">
 
     <TextView
         android:id="@+id/user_entrance_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:text="@string/user_entrance"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/whiteboard_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/user_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/whiteboard_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/user_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/user_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/user_entrance_text"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/whiteboard_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/whiteboard_entrance"
+        android:textColor="@android:color/holo_blue_light"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/meeting_new_people_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/whiteboard_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_entrance_text" />
 
     <TextView
-        android:id="@+id/meeting_new_people_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/whiteboard_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/whiteboard_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/whiteboard_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/whiteboard_entrance_text"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/meeting_new_people_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/meeting_new_people_entrance"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/parent_community_help_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/meeting_new_people_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/whiteboard_entrance_text" />
 
     <TextView
-        android:id="@+id/parent_community_help_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/meeting_new_people_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/meeting_new_people_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/meeting_new_people_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/meeting_new_people_entrance_text"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/parent_community_help_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/parent_community_help_entrance"
+        android:textColor="@android:color/holo_red_light"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/food_delivery_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/parent_community_help_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/meeting_new_people_entrance_text" />
 
     <TextView
-        android:id="@+id/food_delivery_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/parent_community_help_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/parent_community_help_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/parent_community_help_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/parent_community_help_entrance_text"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/food_delivery_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food_delivery_entrance"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/groups_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/food_delivery_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/parent_community_help_entrance_text" />
 
     <TextView
-        android:id="@+id/groups_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/food_delivery_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/food_delivery_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/food_delivery_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/food_delivery_entrance_text"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/groups_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/groups_entrance"
+        android:textColor="#f5da42"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/babysitting_service_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/groups_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/food_delivery_entrance_text" />
 
     <TextView
-        android:id="@+id/babysitting_service_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/groups_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="#f5da42"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/groups_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/groups_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/groups_entrance_text"
+        tools:text="6" />
+
+    <TextView
+        android:id="@+id/babysitting_service_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/babysitting_services_entrance"
+        android:textColor="@android:color/holo_purple"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/emergency_center_entrance_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/babysitting_service_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/groups_entrance_text" />
 
     <TextView
-        android:id="@+id/emergency_center_entrance_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/babysitting_service_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/babysitting_service_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/babysitting_service_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/babysitting_service_entrance_text"
+        tools:text="7" />
+
+    <TextView
+        android:id="@+id/emergency_center_entrance_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/emergency_help_entrance"
+        android:textColor="#63390e"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/users_joined_count_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/emergency_center_entrance_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/babysitting_service_entrance_text" />
 
     <TextView
-        android:id="@+id/users_joined_count_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/emergency_center_entrance_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="#63390e"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/emergency_center_entrance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/emergency_center_entrance_text"
+        app:layout_constraintTop_toTopOf="@id/emergency_center_entrance_text"
+        tools:text="8" />
+
+    <TextView
+        android:id="@+id/users_joined_count_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/users_joined_count"
+        android:textColor="#091a63"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/total_app_users_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/users_joined_count_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emergency_center_entrance_text" />
 
     <TextView
-        android:id="@+id/total_app_users_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/users_joined_count_num_text"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
+        android:textColor="#091a63"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/users_joined_count_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/users_joined_count_text"
+        app:layout_constraintTop_toTopOf="@id/users_joined_count_text"
+        tools:text="9" />
+
+    <TextView
+        android:id="@+id/total_app_users_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/total_app_users"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/total_app_users_num_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/users_joined_count_text" />
+
+    <TextView
+        android:id="@+id/total_app_users_num_text"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/total_app_users_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total_app_users_text"
+        app:layout_constraintTop_toTopOf="@id/total_app_users_text"
+        tools:text="10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

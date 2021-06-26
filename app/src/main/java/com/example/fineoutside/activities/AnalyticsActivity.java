@@ -31,7 +31,7 @@ public class AnalyticsActivity extends AppCompatActivity {
     private final ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
-            total_app_users_text.setText(getString(R.string.total_app_users, snapshot.getChildrenCount()));
+            total_app_users_text.setText(String.valueOf(snapshot.getChildrenCount()));
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(new Date(System.currentTimeMillis()));
             int currentWeek = calendar.get(Calendar.WEEK_OF_YEAR);
@@ -48,7 +48,7 @@ public class AnalyticsActivity extends AppCompatActivity {
                     }
                 }
             }
-            users_joined_count_text.setText(getString(R.string.users_joined_count, count));
+            users_joined_count_text.setText(String.valueOf(count));
         }
 
         @Override
@@ -80,41 +80,41 @@ public class AnalyticsActivity extends AppCompatActivity {
     }
 
     protected void initUI() {
-        user_entrance_text = findViewById(R.id.user_entrance_text);
-        whiteboard_entrance_text = findViewById(R.id.whiteboard_entrance_text);
-        meeting_new_people_entrance_text = findViewById(R.id.meeting_new_people_entrance_text);
-        parent_community_help_entrance_text = findViewById(R.id.parent_community_help_entrance_text);
-        food_delivery_entrance_text = findViewById(R.id.food_delivery_entrance_text);
-        groups_entrance_text = findViewById(R.id.groups_entrance_text);
-        babysitting_service_entrance_text = findViewById(R.id.babysitting_service_entrance_text);
-        emergency_center_entrance_text = findViewById(R.id.emergency_center_entrance_text);
-        total_app_users_text = findViewById(R.id.total_app_users_text);
-        users_joined_count_text = findViewById(R.id.users_joined_count_text);
+        user_entrance_text = findViewById(R.id.user_entrance_num_text);
+        whiteboard_entrance_text = findViewById(R.id.whiteboard_entrance_num_text);
+        meeting_new_people_entrance_text = findViewById(R.id.meeting_new_people_entrance_num_text);
+        parent_community_help_entrance_text = findViewById(R.id.parent_community_help_entrance_num_text);
+        food_delivery_entrance_text = findViewById(R.id.food_delivery_entrance_num_text);
+        groups_entrance_text = findViewById(R.id.groups_entrance_num_text);
+        babysitting_service_entrance_text = findViewById(R.id.babysitting_service_entrance_num_text);
+        emergency_center_entrance_text = findViewById(R.id.emergency_center_entrance_num_text);
+        total_app_users_text = findViewById(R.id.total_app_users_num_text);
+        users_joined_count_text = findViewById(R.id.users_joined_count_num_text);
     }
 
     private void fillDetails() {
         SharedPreferences userEntrance1 = getSharedPreferences("USER_ENTRANCE", MODE_PRIVATE);
-        user_entrance_text.setText(getString(R.string.user_entrance, userEntrance1.getInt(user.getUid(), 0)));
+        user_entrance_text.setText(String.valueOf(userEntrance1.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance2 = getSharedPreferences("WhiteBoard", MODE_PRIVATE);
-        whiteboard_entrance_text.setText(getString(R.string.whiteboard_entrance, userEntrance2.getInt(user.getUid(), 0)));
+        whiteboard_entrance_text.setText(String.valueOf(userEntrance2.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance3 = getSharedPreferences("MeetingNewPeople", MODE_PRIVATE);
-        meeting_new_people_entrance_text.setText(getString(R.string.meeting_new_people_entrance, userEntrance3.getInt(user.getUid(), 0)));
+        meeting_new_people_entrance_text.setText(String.valueOf(userEntrance3.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance4 = getSharedPreferences("ParentCommunityHelp", MODE_PRIVATE);
-        parent_community_help_entrance_text.setText(getString(R.string.parent_community_help_entrance, userEntrance4.getInt(user.getUid(), 0)));
+        parent_community_help_entrance_text.setText(String.valueOf(userEntrance4.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance5 = getSharedPreferences("FoodDelivery", MODE_PRIVATE);
-        food_delivery_entrance_text.setText(getString(R.string.food_delivery_entrance, userEntrance5.getInt(user.getUid(), 0)));
+        food_delivery_entrance_text.setText(String.valueOf(userEntrance5.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance6 = getSharedPreferences("Groups", MODE_PRIVATE);
-        groups_entrance_text.setText(getString(R.string.groups_entrance, userEntrance6.getInt(user.getUid(), 0)));
+        groups_entrance_text.setText(String.valueOf(userEntrance6.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance7 = getSharedPreferences("BabysittingServices", MODE_PRIVATE);
-        babysitting_service_entrance_text.setText(getString(R.string.babysitting_services_entrance, userEntrance7.getInt(user.getUid(), 0)));
+        babysitting_service_entrance_text.setText(String.valueOf(userEntrance7.getInt(user.getUid(), 0)));
 
         SharedPreferences userEntrance8 = getSharedPreferences("EmergencyCenter", MODE_PRIVATE);
-        emergency_center_entrance_text.setText(getString(R.string.emergency_help_entrance, userEntrance8.getInt(user.getUid(), 0)));
+        emergency_center_entrance_text.setText(String.valueOf(userEntrance8.getInt(user.getUid(), 0)));
     }
 }
