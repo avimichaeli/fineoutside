@@ -56,13 +56,7 @@
             android:name=".activities.UserDetailsFormActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".authentication.SignUpActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".authentication.LoginActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".authentication.AuthenticationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ParentCommunityOrEmergencyCenterChatActivity"
@@ -119,13 +113,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".services.MyFirebaseInstanceIDService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>
